@@ -8,11 +8,11 @@ ENV = 'prod'
 if ENV == 'dev':
     #our database
         app.debug = True
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:stevenash13@localhost/Lexus'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'mylocaldb'
 else:
     #production database
         app.debug = False
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ucaxqhegsveqct:143c351d269afb16991ff90f5d2c7e62b533fbd7ba4fe737eab8336fc24727cc@ec2-174-129-227-128.compute-1.amazonaws.com:5432/d5kimmeua5146v'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'mydevdb'
  
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
